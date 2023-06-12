@@ -3,9 +3,10 @@ def calculator(num1,num2,operation)
     @num2=num2
     @operation=operation
 
+    
     case operation
     when 1
-        puts "Addition =- #{num1+num2}"
+        puts "Addition = #{num1+num2}"
     when 2
         puts "Substraction = #{num1-num2}"
     when 3

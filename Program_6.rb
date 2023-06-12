@@ -9,7 +9,7 @@ def find_values(array)
     [highest_values, lowest_values]
   end
   
-array = [111,555,[333,222],10,[11,9,7],5,1]
+array = [111,555,[333,222],10,[11,9,'nil'],5,1]
 
 highest_values, lowest_values = find_values(array)
 

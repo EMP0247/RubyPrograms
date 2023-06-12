@@ -14,7 +14,7 @@ end
 
 h1 = {
     a: 11, aa: {
-        b: 22, bb: {
+        b: nil, bb: {
             c: nil, d: nil, ee: {e: 32, f: nil}
         }
     }
