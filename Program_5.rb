@@ -7,29 +7,32 @@ number = gets.chomp.to_i
 #else
  #   puts "The prime series is = #{Prime.each(number).to_a}"
 #end
-def prime(number)
-    prime_numbers = []
-    if(number == 0)
-        puts "Please Enter postive value."
-    end
-
-    for i in 1..number
-        flag = 0
-        if i < 2
-            next
+class PrimeNumbers
+    def prime(number)
+        prime_numbers = []
+        if(number == 0)
+            puts "Please Enter postive value."
         end
-        for j in 2...i
-            if i % j == 0
-                flag = 1
-                break
+
+        for i in 1..number
+            flag = 0
+            if i < 2
+                next
+            end
+            for j in 2...i
+                if i % j == 0
+                    flag = 1
+                    break
+                end
+            end
+            if flag == 0
+                prime_numbers.push(i)
             end
         end
-        if flag == 0
-            prime_numbers.push(i)
-        end
+        return prime_numbers
     end
-    return prime_numbers
 end
-print prime(number)
+p1 = PrimeNumbers.new
+print p1.prime(number)
 #print(prime_numbers)
 puts()
